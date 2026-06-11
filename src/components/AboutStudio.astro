@@ -1,0 +1,180 @@
+---
+---
+<section id="about" class="about-studio">
+
+  <!-- About: 左2パネル (city image + text) -->
+  <div class="about-image">
+    <img src="/images/about.png" alt="About WADAYA" />
+    <div class="image-overlay" />
+  </div>
+  <div class="about-body">
+    <h2 class="section-title">
+      <span class="en">About</span>
+      <span class="separator">—</span>
+      <span class="ja">私たちについて</span>
+    </h2>
+    <p>
+      審美眼を磨き、クオリティを追求すること。<br />
+      そして、なにより人に寄り添うこと。<br />
+      それが、WADAYAの原点です。
+    </p>
+    <p class="body2">
+      教育事業にも力を入れ、葉加瀬アカデミーでの<br />
+      映像教育、ここも映像ワークショップの開催、<br />
+      バーチャルプロダクション教育システムの<br />
+      導入支援など、映像をもっと身近にひらく活動を<br />
+      続けています。
+    </p>
+    <a href="/about" class="link">詳しく見る →</a>
+  </div>
+
+  <!-- Studio: 右2パネル (studio image + text) -->
+  <div class="studio-image" id="studio">
+    <img src="/images/studio.png" alt="WADAYA STUDIO" />
+    <div class="image-overlay dark" />
+  </div>
+  <div class="studio-body">
+    <h2 class="section-title">
+      <span class="en">Studio</span>
+      <span class="separator">—</span>
+      <span class="ja">自社スタジオ</span>
+    </h2>
+    <p class="studio-name">WADAYA STUDIO</p>
+    <p class="studio-num">Studio 80</p>
+    <p>
+      横浜・みなとみらいエリアの<br />
+      大型LEDウォール設置スタジオ。<br />
+      バーチャルプロダクションから<br />
+      対談・ライブ配信まで、<br />
+      多彩な撮影に対応します。
+    </p>
+    <a href="/studio" class="link">詳細ページはこちら →</a>
+  </div>
+
+</section>
+
+<style>
+  .about-studio {
+    display: grid;
+    grid-template-columns: 1.4fr 1.2fr 1.8fr 1.3fr;
+    min-height: 460px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* About image */
+  .about-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Studio image */
+  .studio-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .studio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+  }
+  .image-overlay.dark {
+    background: rgba(0,0,0,0.35);
+  }
+
+  /* About text body */
+  .about-body {
+    background: #0f0f0f;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-left: 1px solid var(--color-border);
+  }
+
+  /* Studio text body */
+  .studio-body {
+    background: #111;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    border-left: 1px solid var(--color-border);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .en {
+    font-family: var(--font-en);
+    font-size: 1.25rem;
+    color: #fff;
+    letter-spacing: 0.06em;
+  }
+  .separator {
+    font-family: var(--font-en);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  .ja {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+  }
+  .about-body p,
+  .studio-body p {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 2;
+  }
+  .body2 {
+    font-size: 0.72rem !important;
+    color: rgba(255,255,255,0.4) !important;
+  }
+  .studio-name {
+    font-family: var(--font-en);
+    font-size: 0.85rem !important;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.7) !important;
+    font-weight: 400 !important;
+  }
+  .studio-num {
+    font-family: var(--font-en);
+    font-size: 2rem !important;
+    font-weight: 300 !important;
+    color: var(--color-gold) !important;
+    line-height: 1 !important;
+  }
+  .link {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    border-bottom: 1px solid rgba(184,150,90,0.4);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+    margin-top: 4px;
+  }
+  .link:hover { opacity: 0.7; }
+</style>

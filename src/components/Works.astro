@@ -1,0 +1,150 @@
+---
+const works = [
+  { img: '/images/works-01.png', category: '企業VP',       title: 'ブランドフィルム制作' },
+  { img: '/images/works-02.png', category: 'テレビCM',     title: '海外旅客船テーマ' },
+  { img: '/images/works-03.png', category: 'ミュージックビデオ', title: 'フィルムライク/' },
+  { img: '/images/works-04.png', category: 'プロモーション',   title: 'TIGEREYE FUTURE PV' },
+  { img: '/images/works-05.png', category: 'ライブ配信',    title: 'マルチカム配信' },
+  { img: '/images/works-06.png', category: '企業VP',       title: 'コーポレートムービー' },
+];
+---
+<section id="works" class="works">
+  <div class="header">
+    <h2 class="section-title">
+      <span class="en">Works</span>
+      <span class="separator">—</span>
+      <span class="ja">実績紹介</span>
+    </h2>
+    <a href="/works" class="all-link">すべての実績を見る →</a>
+  </div>
+  <div class="scroll-track">
+    {works.map(w => (
+      <article class="card">
+        <div class="thumb">
+          <img src={w.img} alt={w.title} />
+          <div class="play">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.45)"/>
+              <polygon points="10,8 17,12 10,16" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <div class="info">
+          <span class="cat">{w.category}</span>
+          <p class="title">{w.title}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .works {
+    padding: 64px 0 64px 80px;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+  .header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-right: 80px;
+    margin-bottom: 36px;
+  }
+  .section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 400;
+  }
+  .en {
+    font-family: var(--font-en);
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+  .separator {
+    font-family: var(--font-en);
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+  .ja {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+  }
+  .all-link {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.5);
+    padding-right: 80px;
+    transition: color 0.2s;
+  }
+  .all-link:hover { color: #fff; }
+
+  .scroll-track {
+    display: flex;
+    gap: 3px;
+    overflow-x: auto;
+    padding-right: 80px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scroll-track::-webkit-scrollbar { display: none; }
+
+  .card {
+    flex: 0 0 240px;
+    cursor: pointer;
+  }
+  .thumb {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: brightness(0.85);
+  }
+  .card:hover .thumb img {
+    transform: scale(1.05);
+    filter: brightness(1);
+  }
+  .play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  .play svg {
+    width: 44px;
+    height: 44px;
+  }
+  .card:hover .play { opacity: 1; }
+  .info {
+    padding: 10px 0 4px;
+  }
+  .cat {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    margin-bottom: 4px;
+  }
+  .title {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>

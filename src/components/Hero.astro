@@ -1,0 +1,136 @@
+---
+---
+<section class="hero">
+  <div class="bg">
+    <img src="/images/hero.png" alt="" />
+    <div class="overlay" />
+  </div>
+
+  <div class="content">
+    <h1>つくるその先に、つながりを。</h1>
+    <p class="since">WADAYA / since 2015</p>
+  </div>
+
+  <div class="bottom">
+    <button class="mute-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+      </svg>
+      ミュート解除
+    </button>
+    <div class="scroll-indicator">
+      <span class="scroll-label">SCROLL</span>
+      <div class="scroll-line" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg {
+    position: absolute;
+    inset: 0;
+  }
+  .bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(0,0,0,0.3) 0%,
+      rgba(0,0,0,0.25) 40%,
+      rgba(0,0,0,0.55) 100%
+    );
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 40px;
+    transform: translateY(10%);
+  }
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .since {
+    font-family: var(--font-en);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  .mute-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.7rem;
+    font-family: var(--font-sans);
+    letter-spacing: 0.06em;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .mute-btn:hover {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+  }
+  .scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .scroll-label {
+    font-family: var(--font-en);
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    color: rgba(255,255,255,0.5);
+    writing-mode: vertical-rl;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    51%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+</style>

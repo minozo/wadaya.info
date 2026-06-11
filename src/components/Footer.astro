@@ -1,0 +1,290 @@
+---
+---
+<footer>
+  <div class="main">
+    <div class="brand">
+      <a href="/" class="logo-wrap">
+        <span class="logo-main">WADAYA</span>
+        <span class="logo-sub">VIDEO PRODUCTION</span>
+      </a>
+      <p class="tagline">つくるその先に、つながりを。</p>
+      <div class="badge">
+        <div class="badge-ring">
+          <div class="badge-inner">
+            <span class="num">10</span><span class="th">th</span>
+          </div>
+          <span class="ann">ANNIVERSARY</span>
+          <span class="since">since 2015</span>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+      </ul>
+      <ul>
+        <li><a href="#topics">Topics</a></li>
+        <li>
+          <a href="#studio">Studio
+            <span class="ext-icon">↗</span>
+            <span class="ext-label">外サイト</span>
+          </a>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="company">
+      <div class="address">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <div>
+          <p class="company-name">株式会社WADAYA</p>
+          <p>〒220-0005 神奈川県横浜市西区浅間町1-4</p>
+          <p>（車基板はお客様の住所に置き換えてください）</p>
+        </div>
+      </div>
+      <div class="tel-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>045-620-9603</span>
+      </div>
+      <div class="socials">
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy-bar">
+    <p>&copy; 2015-2025 WADAYA Inc. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: #060606;
+    border-top: 1px solid var(--color-border);
+  }
+  .main {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 80px;
+    padding: 56px 80px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Brand */
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .logo-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1;
+  }
+  .logo-main {
+    font-family: var(--font-en);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: #fff;
+  }
+  .logo-sub {
+    font-family: var(--font-en);
+    font-size: 0.5rem;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.3);
+  }
+  .tagline {
+    font-family: var(--font-serif);
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+  .badge {
+    margin-top: 8px;
+  }
+  .badge-ring {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 1px solid var(--color-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+  }
+  .badge-inner {
+    display: flex;
+    align-items: baseline;
+    gap: 1px;
+  }
+  .num {
+    font-family: var(--font-en);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    line-height: 1;
+  }
+  .th {
+    font-family: var(--font-en);
+    font-size: 0.7rem;
+    color: var(--color-gold);
+  }
+  .ann {
+    font-family: var(--font-en);
+    font-size: 0.4rem;
+    letter-spacing: 0.14em;
+    color: var(--color-gold);
+  }
+  .since {
+    font-family: var(--font-en);
+    font-size: 0.4rem;
+    letter-spacing: 0.1em;
+    color: rgba(184,150,90,0.5);
+  }
+
+  /* Nav */
+  nav {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    padding-top: 4px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  nav a {
+    font-family: var(--font-en);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.45);
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: rgba(255,255,255,0.85); }
+  .ext-icon {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.3);
+  }
+  .ext-label {
+    font-size: 0.5rem;
+    font-family: var(--font-sans);
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.04em;
+  }
+
+  /* Company */
+  .company {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 4px;
+  }
+  .address {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .icon {
+    width: 14px;
+    height: 14px;
+    color: rgba(255,255,255,0.25);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .company-name {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 4px;
+    letter-spacing: 0.04em;
+  }
+  .address p, .address div p {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.28);
+    line-height: 1.75;
+  }
+  .tel-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tel-row span {
+    font-family: var(--font-en);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.35);
+  }
+  .socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 4px;
+  }
+  .socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: rgba(255,255,255,0.3);
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+  .socials a:hover { color: rgba(255,255,255,0.7); }
+  .socials svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  /* Copyright */
+  .copy-bar {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 16px 80px;
+    text-align: center;
+  }
+  .copy-bar p {
+    font-family: var(--font-en);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.2);
+  }
+</style>

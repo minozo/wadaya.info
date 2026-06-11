@@ -1,0 +1,140 @@
+---
+---
+<section id="studio" class="studio">
+  <div class="body">
+    <div class="inner">
+      <div class="section-header">
+        <span class="section-en">Studio</span>
+        <h2 class="section-ja">スタジオ</h2>
+      </div>
+      <div class="studio-name">
+        <span class="name">WADAYA STUDIO</span>
+        <span class="num">0</span>
+      </div>
+      <p>
+        東京都内に構えるWADAYA専用スタジオ。<br />
+        白ホリゾントを備えた多目的空間で、<br />
+        商品撮影・ポートレート・映像収録など<br />
+        あらゆる用途に対応します。<br /><br />
+        機材レンタル・スタッフサポートも完備。<br />
+        一日単位でのご予約も承っています。
+      </p>
+      <a href="/studio" class="link">スタジオの詳細 →</a>
+    </div>
+  </div>
+  <div class="img-wrap">
+    <img src="/images/studio.png" alt="WADAYA STUDIO" />
+    <div class="overlay" />
+    <div class="label">
+      <span class="en">Studio</span>
+      <span class="ja">スタジオのご案内</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .studio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    border-top: 1px solid var(--color-border);
+  }
+  .body {
+    background: var(--color-bg-card);
+    display: flex;
+    align-items: center;
+    padding: 80px 64px;
+  }
+  .inner { max-width: 480px; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .section-en {
+    font-family: var(--font-en);
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .section-ja {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+  }
+  .studio-name {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .name {
+    font-family: var(--font-en);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.9);
+  }
+  .num {
+    font-family: var(--font-en);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    line-height: 1;
+  }
+  .inner p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 2.2;
+    margin-bottom: 36px;
+  }
+  .link {
+    font-family: var(--font-en);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    border-bottom: 1px solid var(--color-gold);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+  .link:hover { opacity: 0.7; }
+  .img-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+  .studio:hover .img-wrap img { transform: scale(1.03); }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+  }
+  .label {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .en {
+    font-family: var(--font-en);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+  .ja {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+  }
+</style>

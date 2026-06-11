@@ -1,0 +1,126 @@
+---
+const services = [
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>`,
+    title: '企画・構成',
+    desc: 'コンセプト立案から<br />伝わるストーリーを<br />構築します。',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+    title: '演出',
+    desc: '想いを映像の<br />言語に変換し、<br />空気を演出します。',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>`,
+    title: '撮影',
+    desc: 'シネマ品質の<br />映像・写真を<br />制作します。',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>`,
+    title: '編集',
+    desc: '心を動かす編集で<br />作品に命を<br />吹き込みます。',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+    title: 'イベント・配信',
+    desc: 'ライブ配信・イベント<br />トータルプロダクション<br />対応します。',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+    title: '最新技術',
+    desc: 'LED・immersive VFX・<br />バーチャルプロダクション<br />対応します。',
+  },
+];
+---
+<section id="service" class="service">
+  <div class="inner">
+    <div class="header">
+      <h2 class="section-title">
+        <span class="en">Service</span>
+        <span class="separator">—</span>
+        <span class="ja">サービス</span>
+      </h2>
+    </div>
+    <div class="grid">
+      {services.map(s => (
+        <div class="item">
+          <div class="icon" set:html={s.icon} />
+          <h3>{s.title}</h3>
+          <p set:html={s.desc} />
+        </div>
+      ))}
+    </div>
+    <p class="description">
+      企業VP・CM・採用用動画・インナーモーション・イベント・ライブ配信・テレビ番組など、<br />
+      企業から納品まであらゆるステージで、お客様の映像体験を提供します。
+    </p>
+  </div>
+</section>
+
+<style>
+  .service {
+    padding: 72px 80px 80px;
+    background: #0d0d0d;
+    border-top: 1px solid var(--color-border);
+  }
+  .inner { max-width: 1200px; margin: 0 auto; }
+  .header { margin-bottom: 48px; }
+  .section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 400;
+  }
+  .en {
+    font-family: var(--font-en);
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+  .separator {
+    font-family: var(--font-en);
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+  .ja {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px 32px;
+    margin-bottom: 56px;
+  }
+  .item { text-align: center; }
+  .icon {
+    width: 36px;
+    height: 36px;
+    color: var(--color-gold);
+    margin: 0 auto 12px;
+  }
+  :global(.service .icon svg) { width: 100%; height: 100%; }
+  h3 {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .item p {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.85;
+  }
+  .description {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.9;
+    border-top: 1px solid var(--color-border);
+    padding-top: 36px;
+  }
+</style>

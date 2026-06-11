@@ -1,0 +1,114 @@
+---
+---
+<section id="about" class="about">
+  <div class="img-wrap">
+    <img src="/images/about.png" alt="About WADAYA" />
+    <div class="overlay" />
+    <div class="label">
+      <span class="en">About</span>
+      <span class="ja">わたしたちについて</span>
+    </div>
+  </div>
+  <div class="body">
+    <div class="inner">
+      <div class="section-header">
+        <span class="section-en">About</span>
+        <h2 class="section-ja">わたしたちについて</h2>
+      </div>
+      <p>
+        WADAYAは2014年の創業以来、映像・写真・デザインを通じて<br />
+        企業や個人のビジョンをカタチにしてきました。<br /><br />
+        「つくるその先に、つながりを。」というビジョンのもと、<br />
+        アウトプットの先にある体験・感動・つながりを大切に、<br />
+        クリエイティブの力でブランドと社会を結びます。
+      </p>
+      <a href="/about" class="link">詳しく見る →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    border-top: 1px solid var(--color-border);
+  }
+  .img-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+  .about:hover .img-wrap img { transform: scale(1.03); }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+  }
+  .label {
+    position: absolute;
+    bottom: 40px;
+    left: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .en {
+    font-family: var(--font-en);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+  .ja {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+  }
+  .body {
+    background: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    padding: 80px 64px;
+  }
+  .inner { max-width: 480px; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .section-en {
+    font-family: var(--font-en);
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .section-ja {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+  }
+  .inner p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 2.2;
+    margin-bottom: 36px;
+  }
+  .link {
+    font-family: var(--font-en);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    border-bottom: 1px solid var(--color-gold);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+  .link:hover { opacity: 0.7; }
+</style>

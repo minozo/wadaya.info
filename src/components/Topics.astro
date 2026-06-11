@@ -1,0 +1,143 @@
+---
+const topics = [
+  {
+    img: '/images/topics-01.png',
+    date: '2025.10.18',
+    category: 'NEWS',
+    title: 'LEDメディアコートオールプロダクション事業を追加しました。',
+  },
+  {
+    img: '/images/topics-02.png',
+    date: '2025.10.02',
+    category: '撮影事例',
+    title: '企業VPの効果を最大化する3つのポイント',
+  },
+  {
+    img: '/images/topics-03.png',
+    date: '2025.09.20',
+    category: 'コラム',
+    title: 'インカメラVFXの今と、これからの映像表現',
+  },
+];
+---
+<section id="topics" class="topics">
+  <div class="inner">
+    <div class="header">
+      <h2 class="section-title">
+        <span class="en">Topics</span>
+        <span class="separator">—</span>
+        <span class="ja">お知らせ・コラム</span>
+      </h2>
+      <a href="/topics" class="all-link">すべて見る →</a>
+    </div>
+    <div class="grid">
+      {topics.map(t => (
+        <article class="card">
+          <div class="thumb">
+            <img src={t.img} alt={t.title} />
+          </div>
+          <div class="info">
+            <div class="meta">
+              <time>{t.date}</time>
+              <span class="cat">{t.category}</span>
+            </div>
+            <p class="title">{t.title}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .topics {
+    padding: 72px 80px;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+  }
+  .inner { max-width: 1200px; margin: 0 auto; }
+  .header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 400;
+  }
+  .en {
+    font-family: var(--font-en);
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+  .separator {
+    font-family: var(--font-en);
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+  .ja {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+  }
+  .all-link {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s;
+  }
+  .all-link:hover { color: #fff; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .card { cursor: pointer; }
+  .thumb {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: brightness(0.9);
+  }
+  .card:hover .thumb img {
+    transform: scale(1.04);
+    filter: brightness(1);
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  time {
+    font-family: var(--font-en);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+  }
+  .cat {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    border: 1px solid rgba(184,150,90,0.5);
+    padding: 1px 7px;
+  }
+  .title {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    padding: 0 16px 20px 0;
+  }
+</style>
